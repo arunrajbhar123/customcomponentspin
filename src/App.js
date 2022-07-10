@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Otp from "./components/Otp";
+import styled from "styled-components";
 
-function App() {
+function InputOtp() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OtpWrapper>
+        <h1>OTP(One-Time-Password) Section</h1>
+        <Otp  />
+      </OtpWrapper>
     </div>
   );
 }
 
-export default App;
+export default InputOtp;
+const OtpWrapper = styled.div`
+  border: 1px solid #111;
+  height: auto;
+  margin: 1rem 5rem;
+  padding: 12px;
+`;
